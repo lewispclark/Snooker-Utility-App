@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+
+    tools:context=".InGame">
+
+    <RelativeLayout
+        android:id="@+id/grp_frame_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/black_outline"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_frame_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:text="@string/frame" />
+
+        <TextView
+            android:id="@+id/tv_frame_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tv_frame_label"
+            android:layout_marginStart="1dp"
+            android:text="@string/_3" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/grp_scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_frame_no"
+        android:background="@drawable/black_outline"
+        android:weightSum="1"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:id="@+id/grp_player_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:background="@drawable/black_outline"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_player_1_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player_1" />
+
+            <TextView
+                android:id="@+id/tv_player_1_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="2dp"
+                android:text="@string/_1"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/img_player_1_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tv_player_1_name"
+                android:adjustViewBounds="true"
+                android:maxWidth="20dp"
+                android:maxHeight="20dp"
+                android:rotationY="180"
+                android:scaleType="fitCenter"
+                app:srcCompat="@android:drawable/ic_media_play"
+                android:contentDescription="@string/player_indicator" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/grp_player_frames"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_player_1_frames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/tv_total_frames"
+                android:text="@string/_1"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/tv_total_frames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/_1" />
+
+            <TextView
+                android:id="@+id/tv_player_2_frames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tv_total_frames"
+                android:layout_marginStart="2dp"
+                android:text="@string/_1" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/grp_player_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:background="@drawable/black_outline"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_player_2_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="@string/_2" />
+
+            <ImageView
+                android:id="@+id/img_player_2_turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/tv_player_2_name"
+                android:adjustViewBounds="true"
+                android:maxWidth="20dp"
+                android:maxHeight="20dp"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                app:srcCompat="@android:drawable/ic_media_play"
+                android:contentDescription="@string/player_indicator" />
+
+            <TextView
+                android:id="@+id/tv_player_2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/player_2" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/grp_elapsed_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_scores"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_elapsed_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:text="@string/elapsed_time" />
+
+        <TextView
+            android:id="@+id/tv_elapsed_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_elapsed_time_label"
+            android:layout_marginStart="1dp"
+            android:text="@string/_0" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/grp_points_difference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_elapsed_time"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_points_difference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:text="@string/_0" />
+
+        <TextView
+            android:id="@+id/tv_points_ahead_or_behind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_points_difference"
+            android:layout_marginStart="1dp"
+            android:text="@string/behind" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/grp_score_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_points_difference"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_points_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:text="@string/_0" />
+
+        <TextView
+            android:id="@+id/tv_remaining_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_points_remaining"
+            android:layout_marginStart="1dp"
+            android:text="@string/remaining" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/grp_snookers_required"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_score_remaining"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_snookers_required"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:text="@string/_0" />
+
+        <TextView
+            android:id="@+id/tv_snookers_required_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_snookers_required"
+            android:layout_marginStart="1dp"
+            android:text="@string/snookers_required" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/grp_current_break"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_snookers_required"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_current_break"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:text="@string/current_break" />
+
+        <TextView
+            android:id="@+id/tv_current_break_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_current_break"
+            android:layout_marginStart="1dp"
+            android:text="@string/_0"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/grp_balls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_current_break"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/grp_balls_row_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:baselineAligned="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:padding="5dp">
+
+                <com.example.coursework.BallButton
+                    android:id="@+id/btn_red_ball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/red_ball_foreground"
+                    android:backgroundTint="@color/red_ball"
+                    android:foreground="?actionBarItemBackground"
+                    android:scaleType="fitCenter"
+                    android:text="@string/_1"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:padding="5dp">
+
+                <com.example.coursework.BallButton
+                    android:id="@+id/btn_yellow_ball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/yellow_ball_foreground"
+                    android:backgroundTint="@color/yellow_ball"
+                    android:foreground="?actionBarItemBackground"
+                    android:scaleType="fitCenter"
+                    android:text="@string/_2"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:padding="5dp">
+
+                <com.example.coursework.BallButton
+                    android:id="@+id/btn_green_ball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/green_ball_foreground"
+                    android:backgroundTint="@color/green_ball"
+                    android:foreground="?actionBarItemBackground"
+                    android:scaleType="fitCenter"
+                    android:text="@string/_3"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:padding="5dp">
+
+                <com.example.coursework.BallButton
+                    android:id="@+id/btn_brown_ball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/brown_ball_foreground"
+                    android:backgroundTint="@color/brown_ball"
+                    android:foreground="?actionBarItemBackground"
+                    android:scaleType="fitCenter"
+                    android:text="@string/_4"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/grp_balls_row_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/grp_balls_row_1"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:baselineAligned="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:padding="5dp">
+
+                <com.example.coursework.BallButton
+                    android:id="@+id/btn_blue_ball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/blue_ball_foreground"
+                    android:backgroundTint="@color/blue_ball"
+                    android:foreground="?actionBarItemBackground"
+                    android:scaleType="fitCenter"
+                    android:text="@string/_5"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:padding="5dp">
+
+                <com.example.coursework.BallButton
+                    android:id="@+id/btn_pink_ball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/pink_ball_foreground"
+                    android:backgroundTint="@color/pink_ball"
+                    android:foreground="?actionBarItemBackground"
+                    android:scaleType="fitCenter"
+                    android:text="@string/_6"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:padding="5dp">
+
+                <com.example.coursework.BallButton
+                    android:id="@+id/btn_black_ball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/black_ball_foreground"
+                    android:backgroundTint="@color/black_ball"
+                    android:foreground="?actionBarItemBackground"
+                    android:scaleType="fitCenter"
+                    android:text="@string/_7"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:padding="5dp">
+
+                <com.example.coursework.BallButton
+                    android:id="@+id/btn_miss_ball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/miss_ball_foreground"
+                    android:backgroundTint="@color/miss_ball"
+                    android:foreground="?actionBarItemBackground"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:text="@string/miss"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/grp_balls_row_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/grp_balls_row_2"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".375"
+                tools:ignore="UselessLeaf" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:padding="5dp">
+
+                <com.example.coursework.BallButton
+                    android:id="@+id/btn_foul_ball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/foul_ball_foreground"
+                    android:backgroundTint="@color/miss_ball"
+                    android:foreground="?actionBarItemBackground"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:text="@string/foul"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".375"
+                tools:ignore="UselessLeaf" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_go_back_in_game"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/go_back" />
+
+    <Button
+        android:id="@+id/btn_end_game"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/end_game" />
+
+
+</RelativeLayout>

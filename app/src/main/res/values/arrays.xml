@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="no_of_frames">
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>9</item>
+        <item>11</item>
+        <item>13</item>
+    </string-array>
+
+    <string-array name="players">
+        <item>Player1</item>
+        <item>Player2</item>
+        <item>Player3</item>
+        <item>Player4</item>
+    </string-array>
+
+    <string-array name="end_frame_at">
+        <item>1 Snooker Required</item>
+        <item>2 Snooker Required</item>
+        <item>3 Snooker Required</item>
+        <item>4 Snooker Required</item>
+    </string-array>
+
+    <string-array name="leaderboard_sort">
+        <item>Fastest time</item>
+        <item>Highest break</item>
+        <item>Total score</item>
+    </string-array>
+
+    <string-array name="routines_sort">
+        <item>Likes</item>
+        <item>Favourites</item>
+        <item>Name</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+
+    tools:context=".CreateProfile">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_create_profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/create_profile"
+        android:textSize="45sp" />
+
+    <!-- Title line -->
+    <View
+        android:id="@+id/hr_create_profile_title"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_create_profile_title"
+        android:layout_marginBottom="60dp"
+        android:background="#b2b2b2" />
+
+    <!-- Name input -->
+    <EditText
+        android:id="@+id/ed_player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hr_create_profile_title"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/namedotdot"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName" />
+
+    <!-- Go back button -->
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/go_back" />
+
+    <!-- Create profile button -->
+    <Button
+        android:id="@+id/btn_create_profile"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/create_profile" />
+</RelativeLayout>

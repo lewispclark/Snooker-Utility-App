@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+
+    tools:context=".NewGame">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_new_game_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/new_game"
+        android:textSize="45sp" />
+
+    <!-- Title line -->
+    <View
+        android:id="@+id/hr_new_game_title"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_new_game_title"
+        android:layout_marginBottom="20dp"
+        android:background="#b2b2b2" />
+
+    <!-- No of frames label container -->
+    <RelativeLayout
+        android:id="@+id/grp_no_of_frames_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hr_new_game_title"
+        android:paddingTop="75dp">
+
+        <!-- No of frames label -->
+        <TextView
+            android:id="@+id/tv_no_of_frames_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_of_frames" />
+    </RelativeLayout>
+
+    <!-- No of frames container -->
+    <LinearLayout
+        android:id="@+id/grp_no_of_frames_dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grp_no_of_frames_label"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <!-- No of frames dropdown -->
+        <Spinner
+            android:id="@+id/dd_no_of_frames"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/grey_outline"
+            android:entries="@array/no_of_frames"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <!-- Player1 & 2 labels container -->
+    <LinearLayout
+        android:id="@+id/grp_players_labels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grp_no_of_frames_dropdown"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <!-- Player 1 label -->
+        <TextView
+            android:id="@+id/tv_player_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/player_1" />
+
+        <!-- Player 2 label -->
+        <TextView
+            android:id="@+id/tv_player_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/player_2" />
+    </LinearLayout>
+
+    <!-- Player1 & 2 dropdown container-->
+    <LinearLayout
+        android:id="@+id/grp_players_dropdowns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grp_players_labels"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <!-- Player 1 dropdown -->
+        <Spinner
+            android:id="@+id/dd_player_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/grey_outline"
+            android:entries="@array/players"
+            android:spinnerMode="dropdown" />
+
+        <!-- Player 2 dropdown -->
+        <Spinner
+            android:id="@+id/dd_player_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/grey_outline"
+            android:entries="@array/players"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <!-- Extra rules separator-->
+    <TextView
+        android:id="@+id/tv_extra_rules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grp_players_dropdowns"
+        android:layout_marginTop="60dp"
+        android:text="@string/extra_rules" />
+
+    <!-- Extra rules line-->
+    <View
+        android:id="@+id/hr_extra_rules"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_extra_rules"
+        android:layout_marginBottom="20dp"
+        android:background="#b2b2b2" />
+
+    <!-- End frame setting label container-->
+    <RelativeLayout
+        android:id="@+id/grp_end_frame_at_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hr_extra_rules"
+        android:orientation="horizontal">
+
+        <!-- End frame setting label-->
+        <TextView
+            android:id="@+id/tv_end_frame_at_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/end_frame_at" />
+    </RelativeLayout>
+
+    <!-- End frame setting dropdown container-->
+    <LinearLayout
+        android:id="@+id/grp_end_frame_at_dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grp_end_frame_at_label"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <!-- End frame setting dropdown -->
+        <Spinner
+            android:id="@+id/dd_end_frame_at"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/grey_outline"
+            android:entries="@array/end_frame_at"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <!-- New game button -->
+    <Button
+        android:id="@+id/btn_go_back_new_game"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/go_back" />
+
+    <!-- Create game button -->
+    <Button
+        android:id="@+id/btn_create_game"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/create_game" />
+</RelativeLayout>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+
+    tools:context=".ViewProfile">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_view_profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/player_1"
+        android:textSize="45sp" />
+
+    <!-- Title line -->
+    <View
+        android:id="@+id/hr_view_profile_title"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_view_profile_title"
+        android:layout_marginBottom="60dp"
+        android:background="#b2b2b2" />
+
+    <!-- Highest break group -->
+    <LinearLayout
+        android:id="@+id/grp_highest_break"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hr_view_profile_title"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <!-- Highest break label -->
+        <TextView
+            android:id="@+id/tv_highest_break_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/highest_break"
+            android:textAlignment="textEnd" />
+
+        <!-- Highest break value -->
+        <TextView
+            android:id="@+id/tv_highest_break"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/_0"
+            android:textAlignment="textStart" />
+    </LinearLayout>
+
+    <!-- Frames played group -->
+    <LinearLayout
+        android:id="@+id/grp_frames_played"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_highest_break"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <!-- Frames played label -->
+        <TextView
+            android:id="@+id/tv_frames_played_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/frames_played"
+            android:textAlignment="textEnd" />
+
+        <!-- Frames played value-->
+        <TextView
+            android:id="@+id/tv_frames_played"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/_0"
+            android:textAlignment="textStart" />
+    </LinearLayout>
+
+    <!-- Frames won group-->
+    <LinearLayout
+        android:id="@+id/grp_frames_won"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_frames_played"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <!-- Frames won label -->
+        <TextView
+            android:id="@+id/tv_frames_won_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/frames_won"
+            android:textAlignment="textEnd" />
+
+        <!-- Frames won value -->
+        <TextView
+            android:id="@+id/tv_frames_won"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/_0"
+            android:textAlignment="textStart" />
+    </LinearLayout>
+
+    <!-- Frames won percentage group -->
+    <LinearLayout
+        android:id="@+id/grp_frames_won_percentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_frames_won"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <!-- Frames won percentage label -->
+        <TextView
+            android:id="@+id/tv_frames_won_percentage_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/frames_won_percentage"
+            android:textAlignment="textEnd" />
+
+        <!-- Frames won percentage value -->
+        <TextView
+            android:id="@+id/tv_frames_won_percentage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/_0"
+            android:textAlignment="textStart" />
+    </LinearLayout>
+
+    <!-- Games played group-->
+    <LinearLayout
+        android:id="@+id/grp_games_played"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_frames_won_percentage"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <!-- Games played label -->
+        <TextView
+            android:id="@+id/tv_games_played_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/games_played"
+            android:textAlignment="textEnd" />
+
+        <!-- Games played value -->
+        <TextView
+            android:id="@+id/tv_games_played"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/_0"
+            android:textAlignment="textStart" />
+    </LinearLayout>
+
+    <!-- Games won group -->
+    <LinearLayout
+        android:id="@+id/grp_games_won"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_games_played"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <!-- Games won label -->
+        <TextView
+            android:id="@+id/tv_games_won_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/games_won"
+            android:textAlignment="textEnd" />
+
+        <!-- Games won value -->
+        <TextView
+            android:id="@+id/tv_games_won"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/_0"
+            android:textAlignment="textStart" />
+    </LinearLayout>
+
+    <!-- Games won percentage-->
+    <LinearLayout
+        android:id="@+id/grp_games_won_percentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_games_won"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <!-- Games won percentage label -->
+        <TextView
+            android:id="@+id/tv_games_won_percentage_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/games_won_percentage"
+            android:textAlignment="textEnd" />
+
+        <!-- Games won percentage value -->
+        <TextView
+            android:id="@+id/tv_games_won_percentage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.5"
+            android:text="@string/_0"
+            android:textAlignment="textStart" />
+    </LinearLayout>
+
+    <!-- Go back button -->
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/go_back" />
+
+    <!-- Delete profile button -->
+    <Button
+        android:id="@+id/btn_delete_profile"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/delete_profile" />
+</RelativeLayout>

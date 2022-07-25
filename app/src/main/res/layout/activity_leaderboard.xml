@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+
+    tools:context=".Leaderboard">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_leaderboard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/leaderboard"
+        android:textSize="45sp" />
+
+    <!-- Title Line -->
+    <View
+        android:id="@+id/hr_leaderboard_title"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_leaderboard_title"
+        android:layout_marginBottom="20dp"
+        android:background="#b2b2b2" />
+
+    <!-- Scrollbar -->
+    <ScrollView
+        android:id="@+id/scrollbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/btn_go_back"
+        android:layout_below="@+id/hr_leaderboard_title"
+        android:scrollbars="none">
+
+        <!-- Table-->
+        <TableLayout
+            android:id="@+id/tbl_leaderboard_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 1st Table Row (headings) -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 1st Table Column -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/header_cell_shape"
+                    android:padding="3dp"
+                    android:text="@string/player_name"
+                    android:textColor="@color/white" />
+
+                <!-- 2nd Table Column -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/header_cell_shape"
+                    android:padding="3dp"
+                    android:text="@string/time"
+                    android:textColor="@color/white" />
+
+                <!-- 3rd Table Column -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/header_cell_shape"
+                    android:padding="3dp"
+                    android:text="@string/highest_break"
+                    android:textColor="@color/white" />
+
+                <!-- 4th Table Column -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/header_cell_shape"
+                    android:padding="3dp"
+                    android:text="@string/total_score"
+                    android:textColor="@color/white" />
+            </TableRow>
+
+            <!-- Line to separate heading row and content rows -->
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+        </TableLayout>
+    </ScrollView>
+
+    <!-- Go back button -->
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/go_back" />
+</RelativeLayout>

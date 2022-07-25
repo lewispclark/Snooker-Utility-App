@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+
+    tools:context=".MainActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="120dp"
+        android:text="@string/app_display_name"
+        android:textSize="75sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Slogan -->
+    <TextView
+        android:id="@+id/tv_app_slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_app_title"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="@string/app_slogan" />
+
+    <!-- Buttons container -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_app_slogan"
+        android:paddingTop="50dp">
+
+        <!-- New game button -->
+        <Button
+            android:id="@+id/btn_new_game"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/new_game" />
+
+        <!-- Rules button -->
+        <Button
+            android:id="@+id/btn_rules"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/rules" />
+
+        <!-- Profiles button -->
+        <Button
+            android:id="@+id/btn_profiles"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn_new_game"
+            android:text="@string/profiles" />
+
+        <!-- Practice routines button -->
+        <Button
+            android:id="@+id/btn_practice_routines"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn_rules"
+            android:layout_alignParentEnd="true"
+            android:text="@string/practice_routines" />
+
+        <!-- User guide button -->
+        <Button
+            android:id="@+id/btn_user_guide"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn_profiles"
+            android:text="@string/user_guide" />
+    </RelativeLayout>
+</RelativeLayout>

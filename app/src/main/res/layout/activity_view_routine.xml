@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+
+    tools:context=".ViewRoutine">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_view_routines_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/routine_name"
+        android:textSize="45sp" />
+
+    <!-- Title line -->
+    <View
+        android:id="@+id/hr_view_routines_title"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_view_routines_title"
+        android:layout_marginBottom="20dp"
+        android:background="#b2b2b2" />
+
+    <!-- Snooker table layout image -->
+    <ImageView
+        android:id="@+id/img_snooker_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hr_view_routines_title"
+        android:layout_marginTop="-80dp"
+        android:layout_marginBottom="-70dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/snooker_table"
+        app:srcCompat="@mipmap/snooker_table_foreground" />
+
+    <!-- Routine description -->
+    <TextView
+        android:id="@+id/tv_routine_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_snooker_table"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/routine_description" />
+
+    <!-- Player dropdown label -->
+    <TextView
+        android:id="@+id/tv_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dd_player"
+        android:text="@string/player" />
+
+    <!-- Player dropdown -->
+    <Spinner
+        android:id="@+id/dd_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/grp_start_leaderboard"
+        android:background="@drawable/grey_outline"
+        android:entries="@array/players"
+        android:spinnerMode="dropdown" />
+
+    <!-- Buttons group -->
+    <RelativeLayout
+        android:id="@+id/grp_start_leaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_go_back">
+
+        <!-- Start routine button -->
+        <Button
+            android:id="@+id/btn_start_routine"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="@string/start" />
+
+        <!-- Leaderboard button -->
+        <Button
+            android:id="@+id/btn_leaderboard"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:text="@string/leaderboard" />
+    </RelativeLayout>
+
+    <!-- Go back button -->
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/go_back" />
+</RelativeLayout>

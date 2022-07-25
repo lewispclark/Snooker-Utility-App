@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+
+    tools:context=".FrameStats">
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_frame_stats_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/frame_stats"
+        android:textSize="45sp" />
+
+    <!-- Title line -->
+    <View
+        android:id="@+id/hr_frame_stats_title"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_frame_stats_title"
+        android:layout_marginBottom="20dp"
+        android:background="#b2b2b2" />
+
+    <!-- Elapsed time -->
+    <RelativeLayout
+        android:id="@+id/grp_elapsed_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hr_frame_stats_title"
+        android:layout_centerHorizontal="true">
+
+        <!-- Label -->
+        <TextView
+            android:id="@+id/tv_elapsed_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:text="@string/elapsed_time" />
+
+        <!-- Value -->
+        <TextView
+            android:id="@+id/tv_elapsed_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_toEndOf="@id/tv_elapsed_time_label"
+            android:text="@string/_0" />
+    </RelativeLayout>
+
+    <!-- Highest Break-->
+    <RelativeLayout
+        android:id="@+id/grp_highest_break"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_elapsed_time"
+        android:layout_centerHorizontal="true">
+
+        <!-- Label -->
+        <TextView
+            android:id="@+id/tv_highest_break_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:text="@string/highest_break" />
+
+        <!-- Value -->
+        <TextView
+            android:id="@+id/tv_highest_break"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_toEndOf="@id/tv_highest_break_label"
+            android:text="@string/_0" />
+    </RelativeLayout>
+
+    <!-- Player names group -->
+    <LinearLayout
+        android:id="@+id/grp_player_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_highest_break"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:weightSum="1">
+
+        <!-- Player 1 name-->
+        <TextView
+            android:id="@+id/tv_player_1_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/player_1"
+            android:textAlignment="textEnd" />
+
+        <!-- Stat Label -->
+        <TextView
+            android:id="@+id/tv_stat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="@string/stat"
+            android:textAlignment="center" />
+
+        <!-- Player 2 name -->
+        <TextView
+            android:id="@+id/tv_player_2_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/player_2"
+            android:textAlignment="textStart" />
+    </LinearLayout>
+
+    <!-- Player scores group/row  -->
+    <LinearLayout
+        android:id="@+id/grp_player_scores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_player_names"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <!-- Player 1 score -->
+        <TextView
+            android:id="@+id/tv_player_1_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/_0"
+            android:textAlignment="textEnd" />
+        <!-- Score label -->
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="@string/score"
+            android:textAlignment="center" />
+        <!-- Player 2 score -->
+        <TextView
+            android:id="@+id/tv_player_2_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/_0"
+            android:textAlignment="textStart" />
+    </LinearLayout>
+
+    <!-- Highest break group/row -->
+    <LinearLayout
+        android:id="@+id/grp_player_breaks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grp_player_scores"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <!-- Player 1 highest break -->
+        <TextView
+            android:id="@+id/tv_player_1_highest_break"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/_0"
+            android:textAlignment="textEnd" />
+        <!-- Highest break label -->
+        <TextView
+            android:id="@+id/tv_highest_break_separate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="@string/highest_break"
+            android:textAlignment="center" />
+        <!-- Player 2 highest break -->
+        <TextView
+            android:id="@+id/tv_player_2_highest_break"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/_0"
+            android:textAlignment="textStart" />
+    </LinearLayout>
+
+    <!-- Next frame button -->
+    <Button
+        android:id="@+id/btn_next_frame"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/next_frame" />
+</RelativeLayout>

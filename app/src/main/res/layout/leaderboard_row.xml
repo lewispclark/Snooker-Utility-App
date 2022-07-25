@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 1st Table Column -->
+    <TextView
+        android:id="@+id/attrib_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/cell_shape"
+        android:padding="3dp"
+        android:text="@string/routine_preview"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <!-- 2nd Table Column -->
+    <TextView
+        android:id="@+id/attrib_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/cell_shape"
+        android:padding="3dp"
+        android:text="@string/routine_preview"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <!-- 3rd Table Column -->
+    <TextView
+        android:id="@+id/attrib_highest_break"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/cell_shape"
+        android:padding="3dp"
+        android:text="@string/routine_preview"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <!-- 4th Table Column -->
+    <TextView
+        android:id="@+id/attrib_total_score"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/cell_shape"
+        android:padding="3dp"
+        android:text="@string/routine_preview"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+</TableRow>
